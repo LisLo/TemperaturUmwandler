@@ -15,13 +15,31 @@ from berechner import Berechner
 
 class Umwandler():
     def __init__(self):
-        self.input_format = "Celsius"
-        self.output_format = "Fahrenheit"
-        self.input_value = 30
+        self.input_format = "Fahrenheit"
+        self.output_format = "Kelvin"
+        self.input_value = 86
+        
     
+    def ausgabe(self):
+        print(self.result)
+
     def manager(self):
         temp = Berechner(self)
         if self.input_format == "Celsius" and self.output_format == "Fahrenheit":
-            temp.cel_to_fah()
+            # result = temp.cel_to_fah()
+            temp.cel_to_fah()    
+        elif self.input_format == "Celsius" and self.output_format == "Kelvin":
+            temp.cel_to_kel()
+        elif self.input_format == "Kelvin" and self.output_format == "Celsius":
+            temp.kel_to_cel()
+        elif self.input_format == "Kelvin" and self.output_format == "Fahrenheit":
+            temp.kel_to_fah() 
+        elif self.input_format == "Fahrenheit" and self.output_format == "Celsius":
+            temp.fah_to_cel()
+        elif self.input_format == "Fahrenheit" and self.output_format == "Kelvin":
+            temp.fah_to_kel()
+        self.result = temp.result
 
-umwandler = Umwandler().manager()
+umwandler = Umwandler()
+umwandler.manager()
+umwandler.ausgabe()

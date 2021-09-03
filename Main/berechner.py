@@ -5,19 +5,43 @@ class Berechner():
         self.value = input.input_value
     
     def cel_to_fah(self): 
-        self.result = self.value * 9/5 + 32
+        if self.value >= -273.15:
+            self.result = self.value * 9/5 + 32
+        else:
+            print("Fehler bei der Temperatureingabe")
+            exit()
 
     def cel_to_kel(self):
-        self.result = self.value + 273.15
+        if self.value >= -273.15:
+            self.result = self.value + 273.15
+        else:
+            print("Fehler bei der Temperatureingabe")
+            exit()
     
     def kel_to_cel(self):
-        self.result = self.value - 273.15
+        if self.value >= 0.0:
+            self.result = self.value - 273.15
+        else:
+            print("Fehler bei der Temperatureingabe")
+            exit()
 
     def kel_to_fah(self):
-        self.result = (self.value - 273.15) * 9/5 + 32
+        if self.value >= 0.0:
+            self.result = (self.value - 273.15) * 9/5 + 32
+        else:
+            print("Fehler bei der Temperatureingabe")
+            exit()
 
     def fah_to_cel(self):
-        self.result = (self.value - 32) * 5/9
+        if self.value >= -459.67:
+            self.result = (self.value - 32) * 5/9
+        else:
+            print("Fehler bei der Temperatureingabe")
+            exit()
 
     def fah_to_kel(self):
-        self.result = (self.value - 32) * 5/9 + 273.15
+        if self.value >= -459.67:
+            self.result = (self.value - 32) * 5/9 + 273.15
+        else:
+            print("Fehler bei der Temperatureingabe")
+            exit()

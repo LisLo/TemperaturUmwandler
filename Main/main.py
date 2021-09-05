@@ -47,5 +47,5 @@ umwandler = Umwandler()
 # umwandler.ausfuehren()
 
 root = tkinter.Tk()
-flaeche = Oberflaeche(master=root)
+flaeche = Oberflaeche(root)
 flaeche.mainloop()

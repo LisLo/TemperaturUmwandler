@@ -1,10 +1,10 @@
 from berechner import Berechner
 
 class Umwandler():
-    def __init__(self):
-        self.input_format = "Celsius"
-        self.output_format = "Fahrenheit"
-        self.input_value = 30
+    def __init__(self, input_format, output_format, input_value):
+        self.input_format = input_format
+        self.output_format = output_format
+        self.input_value = input_value
         
     
     def ausgabe(self):
@@ -30,8 +30,6 @@ class Umwandler():
         self.result = temp.result
 
     def ausfuehren(self):
-        umwandler.manager()
-        umwandler.ausgabe()
-
-umwandler = Umwandler()
-# umwandler.ausfuehren()
+        self.manager()
+        # self.ausgabe()
+        return self.result

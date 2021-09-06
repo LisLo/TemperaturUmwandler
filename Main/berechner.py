@@ -3,6 +3,7 @@ class Berechner():
         self.input_format = input.input_format
         self.output_format = input.output_format
         self.value = input.input_value
+        print(input.input_value)
     
     def cel_to_fah(self): 
         if self.value >= -273.15:

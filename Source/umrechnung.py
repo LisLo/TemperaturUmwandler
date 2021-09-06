@@ -1,4 +1,4 @@
-from berechner import Berechner
+from Source.berechner import Berechner
 
 class Umwandler():
     def __init__(self, input_format, output_format, input_value):

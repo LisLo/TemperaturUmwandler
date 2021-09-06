@@ -5,10 +5,6 @@ class Umwandler():
         self.input_format = input_format
         self.output_format = output_format
         self.input_value = input_value
-        
-    
-    def ausgabe(self):
-        print(self.result)
 
     def manager(self):
         temp = Berechner(self)
@@ -31,5 +27,4 @@ class Umwandler():
 
     def ausfuehren(self):
         self.manager()
-        # self.ausgabe()
         return self.result

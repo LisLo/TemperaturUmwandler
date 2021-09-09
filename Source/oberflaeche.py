@@ -7,26 +7,26 @@ class Oberflaeche(tk.Frame):
         super().__init__(window)
         self.window = window
         self.window.title("Temperatur Umwandler")
-        self.window.maxsize(1000,400)
-        self.window.minsize(200,100)
+        self.window.maxsize(1000, 400)
+        self.window.minsize(200, 100)
         self.input_format = "Celsius"
         self.output_format = "Fahrenheit"
         self.input_value = 0.0
 
         self.create_widgets()
-    
+  
     def button_action(self):
         self.input_value = float(self.num1.get())
         ergebnis = Umwandler(self.input_format, self.output_format, self.input_value)
         message = str(ergebnis.ausfuehren())
         self.ergebnis_label.configure(text = message)
-    
+
     def eingabe_wahl(self, wert):
         self.input_format = wert
 
     def ausgabe_wahl(self, wert):
         self.output_format = wert
-    
+
     def create_widgets(self):
         EinheitenListe = [
             ("Celsius"),
@@ -66,7 +66,7 @@ class Oberflaeche(tk.Frame):
         )
         anweisungs_label2.grid(row = 3, column = 0, pady = 20)
 
-        self.num1 = tk.Entry(self.master, bd=5, width=40)
+        self.num1 = tk.Entry(self.master, bd = 5, width = 40)
         self.num1.insert(0, "0")
         self.num1.grid(row = 4, column = 0)
 
@@ -82,4 +82,3 @@ class Oberflaeche(tk.Frame):
             self.window, text = "nichts berechnet", font = "Times"
         )
         self.ergebnis_label.grid(row = 5, column = 1, pady = 20)
-

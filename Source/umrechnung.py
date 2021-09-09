@@ -1,6 +1,7 @@
 from Source.berechner import Berechner
 
 class Umwandler():
+    
     def __init__(self, input_format, output_format, input_value):
         self.input_format = input_format
         self.output_format = output_format

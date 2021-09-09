@@ -3,7 +3,7 @@ import os
 import sys
 # find root dir
 root_path = os.path.split((os.path.dirname(__file__)))[0]
-# set root 
+# set root
 sys.path.append(root_path)
 from Source.oberflaeche import Oberflaeche
 

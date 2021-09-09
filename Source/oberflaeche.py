@@ -1,8 +1,9 @@
 import tkinter as tk
-from tkinter.constants import COMMAND, LEFT, NONE
+from tkinter.constants import NONE
 from Source.umrechnung import Umwandler
 
 class Oberflaeche(tk.Frame):
+
     def __init__(self, window = NONE):
         super().__init__(window)
         self.window = window
@@ -52,17 +53,17 @@ class Oberflaeche(tk.Frame):
 
         output_format = tk.StringVar(self)
         output_format.set(EinheitenListe[1])
-        
+
         opt1_input = tk.OptionMenu(self.window, input_format, *EinheitenListe, command=self.eingabe_wahl)
         opt1_input.config(width=30, font=("helvetica", 12))
         opt1_input.grid(row = 2, column = 0)
-        
+
         opt2_output = tk.OptionMenu(self.window, output_format, *EinheitenListe, command=self.ausgabe_wahl)
         opt2_output.config(width=30, font=("helvetica", 12))
         opt2_output.grid(row = 2, column = 1)
 
         anweisungs_label2 = tk.Label(
-            self.window, text= "Geben Sie eine Temperatur ein.", font = "Times" 
+            self.window, text= "Geben Sie eine Temperatur ein.", font = "Times"
         )
         anweisungs_label2.grid(row = 3, column = 0, pady = 20)
 

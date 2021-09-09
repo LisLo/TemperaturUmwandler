@@ -14,7 +14,7 @@ class Oberflaeche(tk.Frame):
         self.input_value = 0.0
 
         self.create_widgets()
-  
+
     def button_action(self):
         self.input_value = float(self.num1.get())
         ergebnis = Umwandler(self.input_format, self.output_format, self.input_value)
@@ -34,11 +34,11 @@ class Oberflaeche(tk.Frame):
             ("Kelvin")
         ]
         anweisungs_label1 = tk.Label(
-            self.window, text= "Wählen Sie Eingabe- und Ausgabe-Einheit aus.", font = "Times" 
+            self.window, text = "Wählen Sie Eingabe- und Ausgabe-Einheit aus.", font = "Times"
         )
         anweisungs_label1.grid(row = 0, column = 0, pady = 20)
 
-        beenden_button = tk.Button(self.master, text="Beenden", command=self.master.quit)
+        beenden_button = tk.Button(self.master, text = "Beenden", command=self.master.quit)
         beenden_button.grid(row = 0, column = 1)
 
         text1_label = tk.Label(self.window, text = "Eingabe")
@@ -70,7 +70,7 @@ class Oberflaeche(tk.Frame):
         self.num1.insert(0, "0")
         self.num1.grid(row = 4, column = 0)
 
-        umrechnung_button = tk.Button(self.master, text="Umrechnen", command=self.button_action)
+        umrechnung_button = tk.Button(self.master, text = "Umrechnen", command=self.button_action)
         umrechnung_button.grid(row = 4, column = 1)
 
         anweisungs_label3 = tk.Label(

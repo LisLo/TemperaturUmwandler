@@ -17,7 +17,7 @@ class Berechner():
         else:
             print("Fehler bei der Temperatureingabe")
             exit()
- 
+
     def kel_to_cel(self):
         if self.value >= 0.0:
             self.result = self.value - 273.15
